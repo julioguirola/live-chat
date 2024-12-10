@@ -48,6 +48,12 @@ export default function Index() {
     supabase.auth.getUser().then((res) => setActualUserId(res.data.user?.id));
   }, []);
 
+  useEffect(() => {
+    if (chat.current) {
+      chat.current.scrollTop = chat.current.scrollHeight;
+    }
+  }, [messages]);
+
   return (
     <main className="h-dvh flex flex-col justify-center items-center gap-1">
       <header className="flex justify-between items-center w-[350px]">
