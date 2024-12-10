@@ -52,7 +52,7 @@ export default function Index() {
     if (chat.current) {
       chat.current.scrollTop = chat.current.scrollHeight;
     }
-  }, [messages]);
+  });
 
   return (
     <main className="h-dvh flex flex-col justify-center items-center gap-1">
