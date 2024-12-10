@@ -50,13 +50,13 @@ export default function Index() {
 
   return (
     <main className="h-dvh flex flex-col justify-center items-center gap-1">
-      <header className="flex justify-between items-center w-[400px]">
+      <header className="flex justify-between items-center w-[350px]">
         <h1 className="font-semibold text-4xl">Live Chat</h1>
         <AuthButton />
       </header>
       <section
         ref={chat}
-        className="h-[70dvh] w-[400px] border rounded p-4 overflow-y-auto flex flex-col items-start gap-2 scroll-smooth"
+        className="h-[70dvh] w-[350px] border rounded p-4 overflow-y-auto flex flex-col items-start gap-2 scroll-smooth"
       >
         {messages
           .toReversed()
@@ -73,7 +73,7 @@ export default function Index() {
       {actualUserId ? (
         <form
           action={formAction}
-          className={"flex justify-between items-center w-[400px] gap-2"}
+          className={"flex justify-between items-center w-[350px] gap-2"}
         >
           <input
             name="msg"
