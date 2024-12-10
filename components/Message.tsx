@@ -31,12 +31,7 @@ export default function Message({ id, user_id, msg, actualUserId }: MsgProps) {
   }, []);
 
   return userInfo ? (
-    <div
-      className={
-        "flex flex-col bg-gray-300 gap-1 rounded-md w-fit p-3 " +
-        (actualUserId === user_id ? "self-end" : "")
-      }
-    >
+    <div className={"flex flex-col bg-gray-300 gap-1 rounded-md w-fit p-3"}>
       <div className="flex justify-start gap-2 items-center">
         <Image
           src={userInfo.avatar_url}
