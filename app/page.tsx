@@ -50,7 +50,7 @@ export default function Index() {
 
   useEffect(() => {
     if (chat.current) {
-      chat.current.scrollTop = chat.current.scrollHeight;
+      chat.current.scrollTop = chat.current.scrollHeight + 90;
     }
   });
 
