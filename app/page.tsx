@@ -48,12 +48,6 @@ export default function Index() {
     supabase.auth.getUser().then((res) => setActualUserId(res.data.user?.id));
   }, []);
 
-  useEffect(() => {
-    if (chat.current) {
-      chat.current.scrollTop = chat.current.scrollHeight + 90;
-    }
-  });
-
   return (
     <main className="h-dvh flex flex-col justify-center items-center gap-1">
       <header className="flex justify-between items-center w-[350px]">
@@ -67,13 +61,7 @@ export default function Index() {
         {messages
           .toReversed()
           ?.map((m) => (
-            <Message
-              key={m.id}
-              id={m.id}
-              user_id={m.user_id}
-              msg={m.msg}
-              actualUserId={actualUserId}
-            />
+            <Message key={m.id} id={m.id} user_id={m.user_id} msg={m.msg} />
           ))}
       </section>
       {actualUserId ? (

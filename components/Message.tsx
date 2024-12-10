@@ -7,10 +7,9 @@ interface MsgProps {
   id: number;
   user_id: string;
   msg: string;
-  actualUserId?: string;
 }
 
-export default function Message({ id, user_id, msg, actualUserId }: MsgProps) {
+export default function Message({ id, user_id, msg }: MsgProps) {
   const [userInfo, setUserInfo] = useState<{
     full_name: string;
     avatar_url: string;
